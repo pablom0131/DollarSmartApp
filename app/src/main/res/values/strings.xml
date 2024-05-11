@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">DollarSmart</string>
+    <string name="expense_title_hint">Enter a title for the expense.</string>
+    <string name="expense_title_label">Title</string>
+    <string name="expense_details_label">Details</string>
+    <string name="expense_amount_hint">Enter expense amount.</string>
+    <string name="expense_amount_label">Amount</string>
+    <string name="expense_category_label">Category</string>
+    <string name="dollar_sign">$</string>
+    <string name="new_expense">New Expense</string>
+    <string name="delete_expense">Delete Expense</string>
+    <string name="budget_amount_hint">Enter your monthly budget.</string>
+    <string name="budget_amount_title">Your monthly budget</string>
+    <string name="nav_options_title">Where would you like to go?</string>
+    <string-array name="expense_categories_array">
+        <item>Groceries</item>
+        <item>Transportation</item>
+        <item>Entertainment</item>
+        <item>Shopping</item>
+        <item>Travel</item>
+        <item>Misc/Other</item>
+    </string-array>
+</resources>

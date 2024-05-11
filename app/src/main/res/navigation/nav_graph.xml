@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/welcomeFragment">
+    <fragment
+        android:id="@+id/expenseListFragment"
+        android:name="com.cs4080.kotlinteam.expensetracker.expenselist.ExpenseListFragment"
+        android:label="ExpenseListFragment"
+        tools:layout="@layout/fragment_expense_list" >
+        <action
+            android:id="@+id/show_expense_detail"
+            app:destination="@id/expenseDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/expenseDetailFragment"
+        android:name="com.cs4080.kotlinteam.expensetracker.expenselist.ExpenseDetailFragment"
+        android:label="ExpenseDetailFragment"
+        tools:layout="@layout/fragment_expense_detail" >
+        <argument
+            android:name="expenseId"
+            app:argType="java.util.UUID" />
+        <action
+            android:id="@+id/select_date"
+            app:destination="@id/datePickerFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/datePickerFragment"
+        android:name="com.cs4080.kotlinteam.expensetracker.expenselist.DatePickerFragment"
+        android:label="DatePickerFragment" >
+        <argument
+            android:name="expenseDate"
+            app:argType="java.util.Date" />
+    </dialog>
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.cs4080.kotlinteam.expensetracker.WelcomeFragment"
+        android:label="WelcomeFragment"
+        tools:layout="@layout/fragment_welcome_screen">
+        <action
+            android:id="@+id/show_expense_list"
+            app:destination="@id/expenseListFragment" />
+        <action
+            android:id="@+id/show_spending_analysis"
+            app:destination="@id/spendingAnalysisFragment" />
+        <action
+            android:id="@+id/show_chat"
+            app:destination="@id/chatFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/spendingAnalysisFragment"
+        android:name="com.cs4080.kotlinteam.expensetracker.spendinganalysis.SpendingAnalysisFragment"
+        android:label="SpendingAnalysisFragment"
+        tools:layout="@layout/fragment_spending_analysis">
+        <argument
+            android:name="budget"
+            app:argType="float" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.cs4080.kotlinteam.expensetracker.chat.ChatFragment"
+        android:label="ChatFragment" />
+
+
+</navigation>
